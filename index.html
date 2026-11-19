@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e9e5ff">
+  <meta name="description" content="Portfolio of John Christopher Bryan B. Bañares — aspiring Data Analyst and IT Developer. Explore systems, technical skills, and project work.">
+  <meta property="og:title" content="John Christopher Bryan B. Bañares | Portfolio">
+  <title>John Christopher Bryan B. Bañares | Data & Development Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#17232d;--ink2:#344653;--slate:#485e6c;--slateDeep:#2e414e;--lav:#e5e1fc;--lilac:#d1cafa;--yellow:#f3eb70;--cream:#f9f8f1;--white:#fff;--line:#a5a9a8;--r:22px;--max:1240px}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;overflow-x:hidden}
+    body.modal-open{overflow:hidden}
+    ::selection{background:#c2baf9;color:#152631}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer}
+    img{display:block;max-width:100%}
+    .wrap{width:min(var(--max),calc(100% - 96px));margin:0 auto}
+    .progress{position:fixed;left:0;top:0;height:4px;background:#f0da54;z-index:99;width:0;transition:width .09s linear}
+    .site-nav{position:fixed;top:15px;left:50%;transform:translateX(-50%);width:min(1250px,calc(100% - 34px));height:67px;padding:0 24px 0 28px;border-radius:90px;background:#354857ee;color:#fff;z-index:90;display:flex;align-items:center;justify-content:space-between;box-shadow:0 7px 25px #1c2b3521;backdrop-filter:blur(22px);border:1px solid #ffffff2a}
+    .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:27px;letter-spacing:-1.7px}
+    .logo span{color:var(--yellow)}
+    .nav-links{display:flex;align-items:center;gap:28px}
+    .nav-links a{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover,.nav-links a:focus-visible{color:var(--yellow)}
+    .nav-cta{border:1px solid #e7e6d4;padding:12px 19px;border-radius:50px;background:var(--yellow);color:var(--ink);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;transition:transform .25s,background .25s}
+    .nav-cta:hover{transform:translateY(-2px);background:#fff}
+    .mobile-menu{display:none;background:transparent;border:0;color:#fff;font-size:26px}
+    .eyebrow{font-size:12px;line-height:1.6;font-weight:800;letter-spacing:.20em;text-transform:uppercase}
+    .pill{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border-radius:45px;border:1px solid #33465348;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .circle{width:8px;height:8px;border-radius:50%;background:#247e5c;box-shadow:0 0 0 4px #46b58924}
+    .display{font-family:'Space Grotesk',sans-serif;font-size:clamp(60px,8.3vw,132px);letter-spacing:-.085em;line-height:.89;font-weight:700;margin:0}
+    .display-sm{font-family:'Space Grotesk',sans-serif;font-size:clamp(52px,6.75vw,102px);letter-spacing:-.075em;line-height:.96;font-weight:700;margin:0}
+    .section-pad{padding:120px 0}
+    .accent{color:var(--yellow)}.accent-dark{color:#c3b9ff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;border-radius:60px;padding:16px 23px;font-size:12px;letter-spacing:.13em;font-weight:800;text-transform:uppercase;border:1.5px solid var(--ink);transition:transform .25s,box-shadow .25s,background .25s}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 9px 0 #17232d1d}
+    .btn.ink{background:var(--ink);color:white}.btn.light{background:transparent}.btn.yellow{background:var(--yellow)}
+    .btn svg{width:16px;height:16px}
+    /* hero */
+    .hero{min-height:850px;display:flex;align-items:center;padding:178px 0 110px;background:var(--lav);position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;width:500px;height:500px;border-radius:100%;background:var(--yellow);filter:blur(1px);right:-250px;top:130px;opacity:.8}
+    .hero::after{content:'✳';font-size:210px;line-height:1;position:absolute;left:-85px;bottom:-90px;color:#cbc2ff;transform:rotate(-18deg)}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .80fr;align-items:center;gap:48px;position:relative;z-index:1}
+    .hero-kicker{display:flex;align-items:center;gap:15px;margin-bottom:33px}
+    .kicker-line{height:1px;width:42px;background:var(--ink)}
+    .hero h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(68px,9.2vw,142px);line-height:.83;letter-spacing:-.091em;margin:0 0 30px}
+    .hero h1 .yellow-under{position:relative;z-index:0;display:inline-block}
+    .hero h1 .yellow-under::before{content:'';position:absolute;height:.26em;bottom:0;left:-2%;width:103%;background:var(--yellow);z-index:-1;transform:rotate(-2deg)}
+    .hero-sub{font-size:clamp(20px,2.1vw,30px);font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-.045em;margin:0 0 17px}
+    .lead{font-size:17px;line-height:1.8;color:#41515a;max-width:620px;margin:0 0 30px}
+    .hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-photo-wrap{position:relative;max-width:475px;margin-left:auto;isolation:isolate}
+    .portrait-splash{position:absolute;inset:-35px -30px 30px 10px;background:var(--yellow);border-radius:47% 53% 53% 47% / 40% 43% 57% 60%;transform:rotate(-8deg);z-index:-1;animation:blob 11s ease-in-out infinite alternate}
+    .hero-photo{width:100%;border-radius:47% 47% 25% 25% / 41% 41% 22% 22%;aspect-ratio:4/4.6;object-fit:cover;object-position:50% 20%;border:9px solid #f9f8f1;box-shadow:18px 26px 0 #34465324;filter:saturate(.95)}
+    .photo-corner{position:absolute;right:-19px;bottom:32px;background:#f9f8f1;padding:18px 19px;border:1px solid #21344130;border-radius:15px;box-shadow:0 16px 30px #1b2c2f23;transform:rotate(5deg)}
+    .photo-corner strong{display:block;font:700 25px 'Space Grotesk',sans-serif;letter-spacing:-.055em}.photo-corner span{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .scroll-hint{position:absolute;bottom:30px;left:50%;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;opacity:.65;transform:translateX(-50%)}
+    /* about */
+    .about{background:var(--slate);color:#f9f9f4}
+    .about-top{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:70px}
+    .about-top .aside-note{max-width:220px;font-size:15px;line-height:1.8;color:#e6edf0}
+    .about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:8%;align-items:center}
+    .about-photo{border:12px solid #f9f8f1;box-shadow:20px 20px 0 #243b45;transform:rotate(-2.5deg);max-height:490px;object-fit:cover;width:100%;aspect-ratio:4/4.1;object-position:center 25%}
+    .about-copy h3{font:700 clamp(26px,3vw,39px)/1.2 'Space Grotesk',sans-serif;letter-spacing:-.035em;margin:0 0 24px}
+    .about-copy p{font-size:17px;line-height:1.87;color:#ebeff1;margin:0 0 22px}
+    .principles{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:35px}
+    .principle{border:1px solid #e6efeb4a;border-radius:12px;padding:20px 19px;display:flex;align-items:center;gap:12px;font-size:13px;font-weight:700;background:#ffffff0c}
+    .principle b{font:700 20px 'Space Grotesk',sans-serif;color:var(--yellow)}
+    /* skill */
+    .skills{background:var(--yellow)}
+    .section-header{display:flex;justify-content:space-between;align-items:end;gap:26px;margin-bottom:48px}
+    .section-header p{font-size:16px;line-height:1.7;max-width:440px;margin:0}
+    .skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+    .skill-card{background:#fffef4;border:1px solid #26374340;border-radius:20px;padding:30px 24px 28px;min-height:310px;transition:transform .35s,box-shadow .35s}
+    .skill-card:hover{transform:translateY(-9px);box-shadow:0 15px 0 #25343d21}
+    .skill-icon{width:52px;height:52px;border:1px solid #17232d47;border-radius:17px;display:grid;place-items:center;font:700 22px 'Space Grotesk',sans-serif;background:var(--lav);margin-bottom:35px}
+    .skill-card h3{font:700 22px 'Space Grotesk',sans-serif;letter-spacing:-.035em;margin:0 0 14px}
+    .skill-card p{font-size:14px;line-height:1.85;color:#43535e;margin:0}
+    .skill-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:31px;border-top:1px solid #28384468;padding-top:21px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+    /* project */
+    .projects{background:var(--cream)}
+    .project-heading{max-width:1100px}
+    .project-heading .display-sm{margin-top:14px}
+    .case-meta{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:20px 0 32px}
+    .case-meta span{border:1px solid #17232d4d;border-radius:60px;padding:10px 14px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.11em}
+    .project-intro{display:grid;grid-template-columns:1fr 1fr;gap:65px;margin:35px 0 52px;padding-bottom:40px;border-bottom:1px solid #9ea6a2}
+    .project-intro h3{font:700 28px/1.25 'Space Grotesk',sans-serif;letter-spacing:-.045em;margin:0 0 17px}
+    .project-intro p{line-height:1.85;color:#435159;margin:0;font-size:16px}
+    .browser{background:#e9e9ed;border:1px solid #9da7a5;border-radius:18px;overflow:hidden;box-shadow:0 26px 50px #23353b1c}
+    .browser-bar{height:51px;background:#d9dbe1;display:flex;align-items:center;gap:8px;padding:0 17px;border-bottom:1px solid #c9ccd0}
+    .dot{height:10px;width:10px;border-radius:50%;background:#b9bec4}.dot:first-child{background:#de7a73}.dot:nth-child(2){background:#e6c25c}.dot:nth-child(3){background:#7fb393}
+    .address-bar{margin:0 auto;background:#f5f5f7;border-radius:7px;color:#67737c;text-align:center;padding:6px 28px;font:600 11px 'DM Sans',sans-serif;letter-spacing:.025em}
+    .browser-image{aspect-ratio: 1917/915;display:block;width:100%;object-fit:contain;background:#fafafa;transition:opacity .25s,transform .35s}
+    .browser-image.switching{opacity:.35;transform:scale(.985)}
+    .gallery-footer{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:22px 0 26px}
+    .gallery-caption h3{font:700 23px 'Space Grotesk',sans-serif;letter-spacing:-.035em;margin:0 0 8px}
+    .gallery-caption p{color:#606b70;margin:0;line-height:1.5;font-size:14px;max-width:750px}
+    .gallery-controls{display:flex;gap:11px}
+    .round-btn{width:50px;height:50px;background:#fff;border:1px solid #17232d;border-radius:50%;font-size:21px;transition:background .2s,transform .2s}.round-btn:hover{background:var(--yellow);transform:translateY(-2px)}
+    .thumbs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:60px}
+    .thumb{background:#fff;border:2px solid transparent;border-radius:13px;padding:5px;position:relative;transition:border-color .23s,transform .23s;overflow:hidden;text-align:left}.thumb:hover{transform:translateY(-5px)}.thumb.active{border-color:#152a38;background:var(--yellow)}
+    .thumb img{border-radius:8px;aspect-ratio:1.58;object-fit:cover;object-position:top;max-height:116px;width:100%;background:white}.thumb span{display:block;font-size:11px;font-weight:800;padding:9px 5px 5px}
+    .system-details{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px;background:#e2defc;padding:44px;border-radius:24px;border:1px solid #9b91c4;align-items:start}
+    .system-details h3{font:700 clamp(29px,3vw,43px)/1.16 'Space Grotesk',sans-serif;letter-spacing:-.055em;margin:12px 0 19px}
+    .system-details p{line-height:1.75;margin:0;color:#384752}
+    .checks{display:grid;gap:14px}.check{display:flex;gap:12px;align-items:flex-start;padding-bottom:13px;border-bottom:1px solid #afa5db}.check b{flex:0 0 auto;display:grid;place-items:center;background:#354653;color:white;font-size:12px;width:27px;height:27px;border-radius:50%}.check span{line-height:1.6;font-size:14px}
+    .code-link{display:inline-flex;align-items:center;gap:12px;margin-top:23px;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.12em;text-decoration:underline;text-underline-offset:6px}
+    /* other projects */
+    .other{background:var(--lav)}
+    .other-grid{display:grid;grid-template-columns:1fr 1fr;gap:21px}
+    .other-card{padding:38px;min-height:350px;border-radius:24px;background:#fdfcf7;border:1px solid #263541;transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+    .other-card:hover{transform:rotate(-1deg) translateY(-5px);box-shadow:12px 12px 0 #1f304225}
+    .card-icon{display:inline-grid;place-items:center;height:57px;width:57px;border-radius:50%;background:var(--yellow);font-size:27px;margin-bottom:27px}
+    .other-card h3{font:700 32px/1.1 'Space Grotesk',sans-serif;letter-spacing:-.055em;max-width:450px;margin:0 0 19px}
+    .other-card p{font-size:15px;line-height:1.8;color:#40515e;margin:0 0 24px;max-width:440px}.year{margin-top:auto;font-size:12px;letter-spacing:.12em;font-weight:800;text-transform:uppercase}
+    /* experience */
+    .journey{background:var(--slateDeep);color:#f7fafb}
+    .journey-cols{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:65px}
+    .journey h3{font:700 28px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:var(--yellow);margin:0 0 35px}
+    .timeline{border-left:1px solid #9da7ae75;padding-left:30px;margin-left:6px}
+    .event{position:relative;padding:0 0 37px}.event::before{content:'';height:11px;width:11px;background:var(--yellow);border:3px solid var(--slateDeep);box-shadow:0 0 0 1px var(--yellow);position:absolute;left:-36px;top:5px;border-radius:50%}
+    .event small{font-size:12px;letter-spacing:.13em;font-weight:800;text-transform:uppercase;color:#bdcacf}
+    .event h4{font:700 22px 'Space Grotesk',sans-serif;letter-spacing:-.04em;margin:10px 0 5px}
+    .event strong{display:block;color:#eff4f4;font-size:14px;margin-bottom:12px}.event p{font-size:14px;color:#dce3e8;line-height:1.7;margin:0}
+    .journey-footer{display:flex;gap:15px;align-items:center;border-top:1px solid #f2f2e74d;padding-top:28px;margin-top:23px;color:#e4e9e8;font-size:14px}
+    .journey-footer b{color:var(--yellow)}
+    /* contact */
+    .contact{background:var(--yellow);padding:125px 0 85px}
+    .contact .display{font-size:clamp(66px,10vw,155px);margin:16px 0 35px}
+    .contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:end}
+    .contact-copy{font-size:20px;line-height:1.65;max-width:560px;margin:0 0 27px}
+    .social{display:grid;gap:13px}.social a{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #30414b6d;padding:14px 0 18px;font:700 20px 'Space Grotesk',sans-serif;letter-spacing:-.03em;overflow-wrap:anywhere;transition:padding .2s}.social a:hover{padding-left:8px}.social a span{font-size:20px;flex:0 0 auto}
+    footer{background:var(--yellow);padding:0 0 30px}.footer-in{border-top:1px solid #263b4780;display:flex;align-items:center;justify-content:space-between;gap:15px;padding-top:25px;font-size:13px;font-weight:600}
+    .back-top{background:var(--ink);border:1px solid var(--ink);color:white;border-radius:50%;height:48px;width:48px;font-size:20px}
+    /* overlay */
+    .lightbox{position:fixed;z-index:200;inset:0;background:#121c23e8;display:none;align-items:center;justify-content:center;padding:35px;backdrop-filter:blur(15px)}
+    .lightbox.open{display:flex}.lightbox-body{max-width:1450px;width:100%;display:flex;flex-direction:column;gap:12px;align-items:center}
+    .lightbox img{max-width:100%;max-height:76vh;object-fit:contain;border:4px solid white;border-radius:10px}.lightbox-caption{color:white;font-size:15px;font-weight:600}.lightbox-close{position:absolute;top:19px;right:25px;border:1px solid #ffffffaa;color:white;border-radius:50%;background:#0b1520;line-height:1;width:48px;height:48px;font-size:24px}
+    .lightbox-nav{display:flex;gap:15px}.lightbox-nav button{color:white;border:1px solid white;background:transparent;padding:9px 17px;border-radius:35px}
+    /* reveal animation */
+    .js .reveal{opacity:0;transform:translateY(30px);transition:opacity .78s ease, transform .78s cubic-bezier(.2,.75,.2,1)}
+    .js .reveal.visible{opacity:1;transform:translateY(0)}
+    .js .reveal[data-delay='1']{transition-delay:.1s}.js .reveal[data-delay='2']{transition-delay:.2s}.js .reveal[data-delay='3']{transition-delay:.3s}
+    .hero .hero-text{animation:heroIn 1.05s .12s both}.hero-photo-wrap{animation:heroImage 1.0s .2s both}
+    @keyframes blob{50%{border-radius:55% 45% 39% 61% / 42% 54% 46% 58%;transform:rotate(6deg)}}
+    @keyframes heroIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes heroImage{from{opacity:0;transform:translate(40px,22px) rotate(3deg)}to{opacity:1;transform:translate(0,0) rotate(0)}}
+    @media(max-width:1050px){.wrap{width:min(var(--max),calc(100% - 56px))}.hero-inner{grid-template-columns:1.05fr .95fr;gap:24px}.hero h1{font-size:clamp(65px,9vw,102px)}.skill-grid{grid-template-columns:1fr 1fr}.about-grid{gap:6%}.journey-cols{gap:40px}.nav-links{gap:15px}.nav-links a{font-size:11px}}
+    @media(max-width:760px){.wrap{width:calc(100% - 36px)}.site-nav{height:60px;top:9px;padding:0 17px}.mobile-menu{display:block}.nav-cta{display:none}.nav-links{display:none;position:absolute;top:70px;left:0;right:0;padding:20px;background:#354857;border-radius:23px;box-shadow:0 18px 25px #0003;flex-direction:column;align-items:flex-start;gap:18px}.nav-links.open{display:flex}.nav-links a{font-size:13px}.hero{padding:135px 0 87px;min-height:0}.hero-inner,.about-grid,.project-intro,.system-details,.journey-cols,.contact-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(68px,16vw,112px)}.hero-photo-wrap{max-width:330px;margin:45px auto 20px}.photo-corner{right:-10px}.scroll-hint{display:none}.section-pad{padding:85px 0}.about-top{align-items:start;flex-direction:column;gap:12px;margin-bottom:43px}.about-top .aside-note{max-width:100%}.about-photo{max-height:380px;width:80%;margin:0 auto 48px}.section-header{align-items:start;flex-direction:column}.section-header p{max-width:100%}.skill-grid{grid-template-columns:1fr 1fr;gap:11px}.skill-card{padding:23px 18px;min-height:280px}.thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}.gallery-footer{align-items:flex-start}.project-intro{gap:29px}.system-details{padding:26px}.other-grid{grid-template-columns:1fr}.contact-grid{gap:20px}.contact .display{font-size:clamp(60px,13vw,96px)}.footer-in{font-size:11px}.section-header .display-sm{max-width:100%}}
+    @media(max-width:480px){.hero h1{font-size:clamp(58px,17vw,82px)}.lead{font-size:15px}.hero-sub{font-size:21px}.skill-grid{grid-template-columns:1fr}.skill-card{min-height:0}.skill-icon{margin-bottom:23px}.principles{grid-template-columns:1fr}.thumbs{grid-template-columns:1fr 1fr}.gallery-footer{flex-wrap:wrap}.gallery-controls{margin-left:auto}.address-bar{font-size:8px;max-width:65%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.other-card{padding:26px}.contact-copy{font-size:17px}.social a{font-size:15px}.display-sm{font-size:clamp(49px,11vw,69px)}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+<div class="progress" aria-hidden="true" id="progress"></div>
+<header class="site-nav" id="top"><a class="logo" href="#home" aria-label="Home">jcb<span>.</span></a><button class="mobile-menu" id="menuToggle" aria-expanded="false" aria-label="Open navigation">☰</button><nav class="nav-links" id="navLinks" aria-label="Primary navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav><a class="nav-cta" href="mailto:johnchristopherbryanbanares@gmail.com">Let’s talk ↗</a></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-inner"><div class="hero-text"><div class="hero-kicker"><span class="eyebrow">Information Technology · Data · Development</span><span class="kicker-line"></span></div><h1>Hi, I’m <span class="yellow-under">John.</span></h1><p class="hero-sub">Aspiring Data Analyst <span style="white-space:nowrap">&amp; IT Developer</span></p><p class="lead">I organize data, develop practical systems, and connect technology with real-world needs. My focus is on building applications that make information clearer and everyday work easier.</p><div class="hero-buttons"><a class="btn ink" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="btn light" href="#contact">Get in touch <span aria-hidden="true">↗</span></a></div><p style="font-size:13px;line-height:1.65;margin-top:34px;color:#52616a">John Christopher Bryan B. Bañares<br>BS Information Technology · STI College Legazpi</p></div><div class="hero-photo-wrap"><div class="portrait-splash"></div><img class="hero-photo" src="assets/portrait.jpg" alt="Professional portrait of John Christopher Bryan B. Bañares"><div class="photo-corner"><strong>JCB.</strong><span>Data + Technology</span></div></div></div><div class="scroll-hint">Scroll to explore ↓</div></section>
+<section class="about section-pad" id="about"><div class="wrap"><div class="about-top reveal"><div><span class="eyebrow">01 / Hello there</span><h2 class="display-sm">ABOUT <span class="accent">ME.</span></h2></div><p class="aside-note">Curious about technology. Serious about the details. Always learning and improving.</p></div><div class="about-grid"><div class="reveal"><img class="about-photo" src="assets/portrait.jpg" alt="John Bañares in a school portrait"></div><div class="about-copy reveal" data-delay="1"><h3>Connecting data, software, and practical problem-solving.</h3><p>I’m a fourth-year Bachelor of Science in Information Technology student at STI College Legazpi, with an expected graduation in 2027. I’m building my career around data analysis, database management, and software development.</p><p>Through academic projects, I’ve worked with SQL Server, user interfaces, backend services, testing, and troubleshooting. My previous inventory clerk experience also introduced me to the importance of accurate records and consistent monitoring in everyday operations.</p><div class="principles"><div class="principle"><b>01</b> Understand the problem</div><div class="principle"><b>02</b> Organize the information</div><div class="principle"><b>03</b> Develop and connect</div><div class="principle"><b>04</b> Test, debug, improve</div></div></div></div></div></section>
+<section class="skills section-pad" id="skills"><div class="wrap"><div class="section-header reveal"><div><span class="eyebrow">02 / What I work with</span><h2 class="display-sm">MY <span style="color:#536479">TOOLKIT.</span></h2></div><p>My technical foundation covers data handling, application development, backend integration, and system quality.</p></div><div class="skill-grid"><article class="skill-card reveal"><div class="skill-icon">DB</div><h3>Data &amp; Databases</h3><p>SQL Server, database management, organized records, information accuracy, and inventory monitoring.</p></article><article class="skill-card reveal" data-delay="1"><div class="skill-icon">{ }</div><h3>Programming</h3><p>Python, JavaScript, Java, and C#, with experience applying programming concepts to academic projects.</p></article><article class="skill-card reveal" data-delay="2"><div class="skill-icon">&lt;/&gt;</div><h3>Web &amp; Backend</h3><p>HTML, CSS, React, Next.js, and FastAPI for working on user-facing pages and backend services.</p></article><article class="skill-card reveal" data-delay="3"><div class="skill-icon">✓</div><h3>Analysis &amp; Quality</h3><p>Requirements analysis, application testing, debugging, troubleshooting, problem-solving, and collaboration.</p></article></div><div class="skill-foot reveal"><span>Analytical thinking · Attention to detail · Communication · Adaptability</span><span>Keep learning →</span></div></div></section>
+<section class="projects section-pad" id="projects"><div class="wrap"><div class="project-heading reveal"><span class="eyebrow">03 / Featured case study · 2025—2026</span><h2 class="display-sm">JOROSS FARM.<br><span style="color:#8b81d7">DATA IN ACTION.</span></h2><div class="case-meta"><span>Capstone project</span><span>SQL Server</span><span>React + Next.js</span><span>Python + FastAPI</span></div></div><div class="project-intro reveal"><div><h3>Farm Analytics and Production Monitoring System for Joross Farm</h3><p>A farm-focused application that brings operational records and monitoring views into one system, covering crops, livestock, reports, and decision-oriented information.</p></div><div><h3>Why this project matters</h3><p>Reliable monitoring starts with organized records. This project gave me practical experience connecting database data, application screens, and backend services while testing and improving system functions with my team.</p></div></div>
+<div class="reveal"><div class="browser"><div class="browser-bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><div class="address-bar">Joross Farm • Capstone system preview</div><button id="expandImage" style="background:transparent;border:0;font-size:19px;color:#354653" aria-label="Expand screenshot" title="Expand screenshot">⤢</button></div><img id="mainScreenshot" class="browser-image" src="assets/dashboard.png" alt="Joross Farm dashboard screenshot"></div><div class="gallery-footer"><div class="gallery-caption"><h3 id="galleryTitle">Dashboard Overview</h3><p id="galleryDesc">A central overview of farm records and operational indicators.</p></div><div class="gallery-controls"><button class="round-btn" id="prevShot" aria-label="Previous screenshot">←</button><button class="round-btn" id="nextShot" aria-label="Next screenshot">→</button></div></div><div class="thumbs" role="group" aria-label="Joross Farm screenshots"><button class="thumb active" data-shot="0" aria-pressed="true"><img src="assets/dashboard.png" alt="Dashboard thumbnail"><span>Dashboard</span></button><button class="thumb" data-shot="1" aria-pressed="false"><img src="assets/crops.png" alt="Crops thumbnail"><span>Crops</span></button><button class="thumb" data-shot="2" aria-pressed="false"><img src="assets/livestock.png" alt="Livestock thumbnail"><span>Livestock</span></button><button class="thumb" data-shot="3" aria-pressed="false"><img src="assets/reports.png" alt="Reports thumbnail"><span>Reports</span></button><button class="thumb" data-shot="4" aria-pressed="false"><img src="assets/intelligence.png" alt="Farm Intelligence thumbnail"><span>Intelligence</span></button></div></div>
+<div class="system-details reveal"><div><span class="eyebrow">My work on this project</span><h3>From organized records to working system features.</h3><p>These are the technical contributions described in my resume, as part of a collaborative capstone project.</p><a class="code-link" href="https://github.com/jcbb34/Farm-And-Analytics-System" target="_blank" rel="noopener noreferrer">Explore the project source ↗</a></div><div class="checks"><div class="check"><b>1</b><span>Managed and organized application data using SQL Server.</span></div><div class="check"><b>2</b><span>Improved user interfaces with React and Next.js.</span></div><div class="check"><b>3</b><span>Connected frontend pages to FastAPI backend services.</span></div><div class="check"><b>4</b><span>Performed system testing, debugging, and troubleshooting.</span></div><div class="check"><b>5</b><span>Collaborated with teammates to improve functionality.</span></div></div></div></div></section>
+<section class="other section-pad" id="other"><div class="wrap"><div class="section-header reveal"><div><span class="eyebrow">04 / Additional academic work</span><h2 class="display-sm">MORE <span style="color:#7d70c7">PROJECTS.</span></h2></div><p>Other classroom systems where I practiced using programming and database concepts to solve everyday recordkeeping tasks.</p></div><div class="other-grid"><article class="other-card reveal"><div class="card-icon" aria-hidden="true">▦</div><h3>Classroom Attendance Management System</h3><p>Developed features for recording and managing student attendance, organizing student information, and resolving issues discovered during testing.</p><span class="year">Academic Project · 2024—2025</span></article><article class="other-card reveal" data-delay="1"><div class="card-icon" aria-hidden="true">▤</div><h3>Point-of-Sale (POS) System</h3><p>Worked on a classroom-based POS system covering sales transactions, product information, inventory records, and sales data while applying programming and database fundamentals.</p><span class="year">Academic Project · 2023—2024</span></article></div><p class="reveal" style="font-size:12px;color:#52616a;margin:23px 0 0">Screenshots of these two academic projects are not currently available.</p></div></section>
+<section class="journey section-pad" id="experience"><div class="wrap"><div class="reveal"><span class="eyebrow">05 / Experience and education</span><h2 class="display-sm">MY <span class="accent">JOURNEY.</span></h2></div><div class="journey-cols"><div class="reveal"><h3>Professional Experience</h3><div class="timeline"><div class="event"><small>2022—2023</small><h4>Overseer Inventory Clerk</h4><strong>Sunwest Corporation</strong><p>Performed inventory oversight and clerical responsibilities, working with inventory records and monitoring activities. This experience reinforced the importance of keeping records organized and accurate.</p></div></div></div><div class="reveal" data-delay="1"><h3>Education</h3><div class="timeline"><div class="event"><small>Expected graduation 2027</small><h4>BS Information Technology</h4><strong>STI College Legazpi</strong><p>Undergraduate studies in information technology and systems development.</p></div><div class="event"><small>2018—2020</small><h4>Senior High School · STEM</h4><strong>St. Raphael Academy</strong></div><div class="event"><small>2015—2018</small><h4>High School</h4><strong>Genecom Institute of Science and Technology</strong></div></div></div></div><div class="journey-footer reveal"><b>How I work</b> · Analytical thinking · Team collaboration · Adaptability · Attention to detail · Willingness to learn</div></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="reveal"><span class="eyebrow">06 / Your next conversation starts here</span><h2 class="display">LET’S <span style="color:#627482">CONNECT.</span></h2></div><div class="contact-grid"><div class="reveal"><p class="contact-copy">Looking for someone interested in data, practical system building, and continuous improvement? I’d be glad to connect and discuss opportunities.</p><a class="btn ink" href="mailto:johnchristopherbryanbanares@gmail.com">Email me ↗</a></div><div class="social reveal" data-delay="1"><a href="mailto:johnchristopherbryanbanares@gmail.com">Email <span>↗</span></a><a href="https://www.linkedin.com/in/jcbanares" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a><a href="https://github.com/jcbb34/Farm-And-Analytics-System" target="_blank" rel="noopener noreferrer">GitHub / Project Code <span>↗</span></a></div></div></div></section>
+</main><footer><div class="wrap footer-in"><span>© <span id="year">2026</span> John Christopher Bryan B. Bañares</span><span>Built to showcase practical work, not invented metrics.</span><button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" aria-label="Back to top">↑</button></div></footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview" aria-hidden="true"><button class="lightbox-close" id="closeLightbox" aria-label="Close preview">×</button><div class="lightbox-body"><img id="lightboxImage" src="assets/dashboard.png" alt="Enlarged project screenshot"><div class="lightbox-caption" id="lightboxCaption">Dashboard Overview</div><div class="lightbox-nav"><button id="lightPrev" aria-label="Previous image">← Previous</button><button id="lightNext" aria-label="Next image">Next →</button></div></div></div>
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ const shots=[
+  {src:document.querySelector('[data-shot="0"] img').src, title:'Dashboard Overview',description:'A central view of farm activity, operational indicators, and resource monitoring.',alt:'Screenshot of the Joross Farm dashboard'},
+  {src:document.querySelector('[data-shot="1"] img').src,title:'Crops Management',description:'Crop records with planting areas, status, harvest readiness, and field or section information.',alt:'Screenshot of Joross Farm crops management'},
+  {src:document.querySelector('[data-shot="2"] img').src,title:'Livestock Management',description:'Livestock records covering species, breeds, pens, growth stages, and monitoring information.',alt:'Screenshot of Joross Farm livestock management'},
+  {src:document.querySelector('[data-shot="3"] img').src,title:'Reports Management',description:'Generated reports across operations, crops, livestock, inventory, and related activities.',alt:'Screenshot of Joross Farm reports management'},
+  {src:document.querySelector('[data-shot="4"] img').src,title:'Farm Intelligence',description:'Decision overview and indicators designed to support farm-related analysis.',alt:'Screenshot of Joross Farm intelligence module'}
+ ];
+ let shot=0;const main=document.getElementById('mainScreenshot'),title=document.getElementById('galleryTitle'),desc=document.getElementById('galleryDesc');
+ const thumbButtons=[...document.querySelectorAll('.thumb')];let swapTimer;
+ function showShot(n){shot=(n+shots.length)%shots.length;main.classList.add('switching');clearTimeout(swapTimer);swapTimer=setTimeout(()=>{main.src=shots[shot].src;main.alt=shots[shot].alt;title.textContent=shots[shot].title;desc.textContent=shots[shot].description;main.classList.remove('switching')},150);thumbButtons.forEach((b,i)=>{const active=i===shot;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});if(lightbox.classList.contains('open')){lightImage.src=shots[shot].src;lightCaption.textContent=shots[shot].title;lightImage.alt=shots[shot].alt}}
+ thumbButtons.forEach((b,i)=>b.addEventListener('click',()=>showShot(i)));
+ document.getElementById('prevShot').addEventListener('click',()=>showShot(shot-1));document.getElementById('nextShot').addEventListener('click',()=>showShot(shot+1));
+ const lightbox=document.getElementById('lightbox'),lightImage=document.getElementById('lightboxImage'),lightCaption=document.getElementById('lightboxCaption'),expand=document.getElementById('expandImage');
+ function openLightbox(){lightImage.src=shots[shot].src;lightImage.alt=shots[shot].alt;lightCaption.textContent=shots[shot].title;lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');document.getElementById('closeLightbox').focus()}
+ function closeLightbox(){lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');expand.focus()}
+ expand.addEventListener('click',openLightbox);main.addEventListener('click',openLightbox);main.style.cursor='zoom-in';
+ document.getElementById('closeLightbox').addEventListener('click',closeLightbox);lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});
+ document.getElementById('lightPrev').addEventListener('click',()=>showShot(shot-1));document.getElementById('lightNext').addEventListener('click',()=>showShot(shot+1));
+ document.addEventListener('keydown',e=>{if(!lightbox.classList.contains('open'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')showShot(shot-1);if(e.key==='ArrowRight')showShot(shot+1)});
+ const menu=document.getElementById('menuToggle'),nav=document.getElementById('navLinks');menu.addEventListener('click',()=>{const state=!nav.classList.contains('open');nav.classList.toggle('open',state);menu.setAttribute('aria-expanded',String(state));menu.textContent=state?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
+ const observer=('IntersectionObserver' in window)?new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.09,rootMargin:'0px 0px -35px 0px'}):null;document.querySelectorAll('.reveal').forEach(el=>{if(observer)observer.observe(el);else el.classList.add('visible')});
+ const progress=document.getElementById('progress');let scheduled=false;function onScroll(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?(100*scrollY/max):0)+'%';scheduled=false})}addEventListener('scroll',onScroll,{passive:true});onScroll();document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script></body></html>
